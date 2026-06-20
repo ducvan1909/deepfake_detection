@@ -170,7 +170,7 @@ def main(args):
                           report_progress=True)
             return
 
-        # Else: regular datasets
+        # Else: regular dataset
         print('Downloading {} of dataset "{}"'.format(
             c_type, dataset_path
         ))
