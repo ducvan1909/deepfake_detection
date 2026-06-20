@@ -25,7 +25,7 @@ python -m dataset.asvspoof_download
 
 - Lấy dữ liệu khi cần
 
-```bash
+```
 import pandas as pd
 from pathlib import Path
 
