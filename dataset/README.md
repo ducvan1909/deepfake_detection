@@ -12,7 +12,7 @@ pip install -r dataset/requirements.txt
 - Lưu ý: điều chỉnh --num_videos để lấy số lượng video mong muốn
 
 ```bash
-python -m dataset.faceforensics_download_v4 --server EU2 ".\datasets\FaceForensics++" --d all --c c23 --t videos --num_videos 50 
+python -m dataset.faceforensics_download_v4 --server EU2 ".\dataset\FaceForensics++" --d all --c c23 --t videos --num_videos 50 
 ```
 
 # Tải dữ liệu AsvSpoof
@@ -23,18 +23,3 @@ python -m dataset.faceforensics_download_v4 --server EU2 ".\datasets\FaceForensi
 python -m dataset.asvspoof_download
 ```
 
-- Lấy dữ liệu khi cần
-
-```
-import pandas as pd
-from pathlib import Path
-
-root = Path("dataset/Asvspoof_mini")
-df = pd.read_csv(root / "metadata.csv")
-
-for row in df.itertuples():
-    audio_path = root / row.audio
-    label = 0 if row.label == "bonafide" else 1
-
-    print(audio_path, label)
-```
